@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Nesty · Post 01 — Nesty est là</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414; --ink-strong:#0B0B0B; --paper:#FAFAF9; --card:#FFFFFF;
+    --fill:#F1F1F0; --sep:#E6E6E4; --muted:#7A7A78; --muted-soft:#B4B4B1;
+    --display:'Outfit',system-ui,sans-serif; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#5B5B58;font-family:var(--sans);padding:48px 0;-webkit-font-smoothing:antialiased}
+
+  .rig{display:flex;flex-direction:column;align-items:center;gap:56px}
+  .tag{font:600 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.62}
+
+  .slide{
+    width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:var(--paper);color:var(--ink);
+    display:flex;flex-direction:column;
+    padding:96px 88px;
+  }
+  .slide.dark{background:var(--ink-strong);color:var(--paper)}
+  .slide.dark .muted{color:#8E8E8B}
+  .slide.dark .rule{background:rgba(250,250,249,.16)}
+
+  /* ── shared atoms ─────────────────────────────── */
+  .eyebrow{font:600 17px/1 var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .slide.dark .eyebrow{color:#8E8E8B}
+  .muted{color:var(--muted)}
+  .rule{height:1px;background:var(--sep);width:100%}
+  .grow{flex:1}
+  .h1{font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:.93}
+  .h2{font-family:var(--display);font-weight:600;letter-spacing:-.03em;line-height:1.02}
+  .body{font:400 30px/1.55 var(--sans);color:var(--muted);max-width:27ch}
+
+  .foot{display:flex;align-items:flex-end;justify-content:space-between}
+  .num{font:600 16px/1 var(--sans);letter-spacing:.14em;color:var(--muted-soft)}
+  .wm{font:600 26px/1 var(--display);letter-spacing:-.02em}
+
+  .mark{display:block}
+  .swipe{font:600 16px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+
+  /* ── slide 1 ──────────────────────────────────── */
+  .s1 .h1{font-size:172px}
+  .s1 .stamp{
+    display:inline-flex;align-items:center;gap:14px;
+    border:1px solid rgba(250,250,249,.28);border-radius:999px;
+    padding:14px 26px;font:600 18px/1 var(--sans);letter-spacing:.06em;
+  }
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--paper);display:inline-block}
+
+  /* ── slide 2 ──────────────────────────────────── */
+  .s2 .h2{font-size:84px}
+  .s2 .h2 em{font-style:normal;color:var(--muted-soft)}
+
+  /* ── slide 3 : three surfaces ─────────────────── */
+  .row{display:flex;gap:34px;align-items:baseline;padding:44px 0}
+  .row .k{font:600 20px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-soft);width:52px;flex:none;padding-top:8px}
+  .row .t{font-family:var(--display);font-weight:600;font-size:52px;letter-spacing:-.025em;line-height:1.08}
+  .row .d{font:400 25px/1.5 var(--sans);color:var(--muted);margin-top:12px;max-width:30ch}
+
+  /* ── slide 4 : the mechanism ──────────────────── */
+  .flow{display:flex;align-items:center;gap:30px;margin-top:8px}
+  .box{
+    background:var(--card);border:1px solid var(--sep);border-radius:26px;
+    padding:38px 32px;flex:1;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.04)
+  }
+  .box .bg{font-family:var(--display);font-weight:700;font-size:74px;letter-spacing:-.03em;line-height:1}
+  .box .bl{font:500 20px/1.35 var(--sans);color:var(--muted);margin-top:12px}
+  .arrow{font-size:40px;color:var(--muted-soft);flex:none;line-height:1}
+  .note{font:400 27px/1.5 var(--sans);color:var(--muted);max-width:26ch}
+
+  /* ── slide 5 : CTA ────────────────────────────── */
+  .s5 .h2{font-size:92px}
+  .url{
+    display:inline-block;border-bottom:3px solid var(--paper);
+    font-family:var(--display);font-weight:600;font-size:52px;letter-spacing:-.02em;padding-bottom:8px
+  }
+  .pills{display:flex;flex-wrap:wrap;gap:14px}
+  .pill{
+    border:1px solid rgba(250,250,249,.26);border-radius:999px;
+    padding:15px 26px;font:500 23px/1 var(--sans)
+  }
+
+  @media print{
+    body{background:#fff;padding:0;gap:0}
+    .rig{gap:0}
+    .tag{display:none}
+    .slide{break-after:page;page-break-after:always}
+  }
+  @page{size:1080px 1350px;margin:0}
+</style>
+</head>
+<body>
+<div class="rig">
+
+<!-- ══════════════ SLIDE 1 ══════════════ -->
+<div class="tag">slide 1 / 5 — 1080 × 1350</div>
+<section class="slide dark s1">
+  <svg class="mark" viewBox="0 0 200 140" width="96" height="67" fill="none" aria-label="Nesty">
+    <path d="M 20 120 C 20 45, 55 20, 100 20 C 145 20, 180 45, 180 120" stroke="#FAFAF9" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 42 125 C 42 62, 65 42, 100 42 C 135 42, 158 62, 158 125" stroke="#FAFAF9" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M 62 130 C 62 80, 78 62, 100 62 C 122 62, 138 80, 138 130" stroke="#FAFAF9" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+
+  <div class="grow"></div>
+
+  <h1 class="h1">Nesty<br>est là.</h1>
+
+  <div style="height:52px"></div>
+  <div><span class="stamp"><span class="dot"></span> En ligne aujourd'hui</span></div>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="muted" style="font:400 25px/1.4 var(--sans);max-width:22ch">
+      La plateforme de location tunisienne, construite en Tunisie.
+    </span>
+    <span class="num">01</span>
+  </div>
+</section>
+
+<!-- ══════════════ SLIDE 2 ══════════════ -->
+<div class="tag">slide 2 / 5</div>
+<section class="slide s2">
+  <div class="eyebrow">ce qui est en ligne</div>
+  <div class="grow"></div>
+
+  <h2 class="h2">
+    Un site.<br>
+    Un espace agence.<br>
+    Une application.<br>
+    <em>Un seul calendrier.</em>
+  </h2>
+
+  <div style="height:44px"></div>
+  <p class="body">Pas trois outils collés ensemble. Une seule plateforme, sur les trois écrans où l'immobilier se joue.</p>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="swipe">Faites glisser <span style="font-size:22px">&rarr;</span></span>
+    <span class="num">02</span>
+  </div>
+</section>
+
+<!-- ══════════════ SLIDE 3 ══════════════ -->
+<div class="tag">slide 3 / 5</div>
+<section class="slide">
+  <div class="eyebrow">trois surfaces, une base</div>
+  <div class="grow"></div>
+
+  <div class="rule"></div>
+  <div class="row">
+    <span class="k">01</span>
+    <div>
+      <div class="t">L'espace agence</div>
+      <div class="d">Chaque bien que vous gérez sur un seul tableau. Nuitées, mois, baux à l'année.</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="row">
+    <span class="k">02</span>
+    <div>
+      <div class="t">L'application locataire</div>
+      <div class="d">Recherche par quartier, visite 3D, demande de réservation. iOS et Android.</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="row">
+    <span class="k">03</span>
+    <div>
+      <div class="t">La vérification Nesty</div>
+      <div class="d">Adresse, photos et pièce d'identité contrôlées avant qu'une annonce ne parte en ligne.</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <div class="grow"></div>
+  <div class="foot">
+    <span class="wm">nesty</span>
+    <span class="num">03</span>
+  </div>
+</section>
+
+<!-- ══════════════ SLIDE 4 ══════════════ -->
+<div class="tag">slide 4 / 5</div>
+<section class="slide">
+  <div class="eyebrow">et la partie que personne n'a</div>
+  <div class="grow"></div>
+
+  <h2 class="h2" style="font-size:76px">Huit photos<br>d'une pièce.<br>Une visite à 360°.</h2>
+
+  <div style="height:56px"></div>
+  <div class="flow">
+    <div class="box"><div class="bg">8</div><div class="bl">photos<br>envoyées</div></div>
+    <span class="arrow">&rarr;</span>
+    <div class="box"><div class="bg">360°</div><div class="bl">visite<br>générée</div></div>
+    <span class="arrow">&rarr;</span>
+    <div class="box"><div class="bg">0</div><div class="bl">appli à<br>installer</div></div>
+  </div>
+
+  <div style="height:52px"></div>
+  <p class="note">Ni casque, ni plugin. Ça s'ouvre dans un lien, sur n'importe quel téléphone.</p>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="muted" style="font:500 23px/1 var(--sans)">Tour3D · notre moteur maison</span>
+    <span class="num">04</span>
+  </div>
+</section>
+
+<!-- ══════════════ SLIDE 5 ══════════════ -->
+<div class="tag">slide 5 / 5</div>
+<section class="slide dark s5">
+  <svg class="mark" viewBox="0 0 200 140" width="82" height="57" fill="none" aria-label="Nesty">
+    <path d="M 20 120 C 20 45, 55 20, 100 20 C 145 20, 180 45, 180 120" stroke="#FAFAF9" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 42 125 C 42 62, 65 42, 100 42 C 135 42, 158 62, 158 125" stroke="#FAFAF9" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M 62 130 C 62 80, 78 62, 100 62 C 122 62, 138 80, 138 130" stroke="#FAFAF9" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+
+  <div class="grow"></div>
+
+  <h2 class="h2">Allez voir.<br>C'est en ligne.</h2>
+  <div style="height:44px"></div>
+  <span class="url">nesty-tn.vercel.app</span>
+
+  <div style="height:64px"></div>
+  <div class="pills">
+    <span class="pill">Courte durée</span>
+    <span class="pill">Longue durée</span>
+    <span class="pill">Visites 3D</span>
+    <span class="pill">Annonces vérifiées</span>
+  </div>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="muted" style="font:400 24px/1.4 var(--sans);max-width:24ch">
+      Vous gérez une agence ? Le lien est en commentaire.
+    </span>
+    <span class="num">05</span>
+  </div>
+</section>
+
+</div>
+
+<script>
+/* Export mode: carousel.html?slide=N renders ONLY slide N, filling the page at
+   exactly 1080x1350 with no chrome around it. Used by export.sh to produce the
+   PNGs you upload. Viewing the file normally is unaffected. */
+(function(){
+  var m=location.search.match(/slide=([0-9]+)/); if(!m) return;
+  document.body.style.padding='0'; document.body.style.background='#fff';
+  document.querySelectorAll('.tag').forEach(function(e){e.remove()});
+  var rig=document.querySelector('.rig'); if(rig) rig.style.gap='0';
+  var s=[].slice.call(document.querySelectorAll('.slide'));
+  s.forEach(function(el,i){ if(i!=m[1]-1) el.remove(); });
+})();
+</script>
+</body>
+</html>

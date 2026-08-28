@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+out/
+.next/
+*.tsbuildinfo
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Application sub-repositories — each has its own GitHub remote and is not
+# tracked by this workspace repo.
+nesty/
+nesty-base/
+nesty-web/
+demo-video/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Nesty · Post 03 — 10 agences fondatrices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414; --ink-strong:#0B0B0B; --paper:#FAFAF9; --card:#FFFFFF;
+    --fill:#F1F1F0; --sep:#E6E6E4; --muted:#7A7A78; --muted-soft:#B4B4B1;
+    --display:'Outfit',system-ui,sans-serif; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#5B5B58;font-family:var(--sans);padding:48px 0;-webkit-font-smoothing:antialiased}
+  .rig{display:flex;flex-direction:column;align-items:center;gap:56px}
+  .tag{font:600 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.62}
+
+  .slide{
+    width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:var(--paper);color:var(--ink);
+    display:flex;flex-direction:column;padding:96px 88px;
+  }
+  .slide.dark{background:var(--ink-strong);color:var(--paper)}
+  .slide.dark .muted{color:#8E8E8B}
+  .slide.dark .rule{background:rgba(250,250,249,.16)}
+  .slide.dark .eyebrow{color:#8E8E8B}
+
+  .eyebrow{font:600 17px/1 var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .muted{color:var(--muted)}
+  .rule{height:1px;background:var(--sep);width:100%}
+  .grow{flex:1}
+  .h2{font-family:var(--display);font-weight:600;letter-spacing:-.03em;line-height:1.03}
+  .body{font:400 30px/1.55 var(--sans);color:var(--muted);max-width:27ch}
+  .foot{display:flex;align-items:flex-end;justify-content:space-between}
+  .num{font:600 16px/1 var(--sans);letter-spacing:.14em;color:var(--muted-soft)}
+  .wm{font:600 26px/1 var(--display);letter-spacing:-.02em}
+  .swipe{font:600 16px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+
+  /* slide 1 — the ten seats */
+  .seats{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+  .seat{
+    aspect-ratio:1;border-radius:18px;border:1.5px solid rgba(250,250,249,.30);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:600;font-size:44px;color:rgba(250,250,249,.55)
+  }
+  .bignum{font-family:var(--display);font-weight:700;font-size:240px;letter-spacing:-.05em;line-height:.85}
+
+  /* slide 2 — the price */
+  .price{display:flex;align-items:flex-end;gap:18px}
+  .price .p{font-family:var(--display);font-weight:700;font-size:190px;letter-spacing:-.05em;line-height:.85}
+  .price .u{font-family:var(--display);font-weight:600;font-size:56px;letter-spacing:-.02em;padding-bottom:22px}
+  .after{font:400 30px/1.5 var(--sans);color:var(--muted)}
+  .strike{text-decoration:line-through;text-decoration-thickness:2px;color:var(--muted-soft)}
+
+  /* slide 3 — what you get */
+  .li{display:flex;gap:28px;align-items:flex-start;padding:32px 0}
+  .li .c{
+    width:44px;height:44px;flex:none;border-radius:50%;background:var(--ink);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;font:600 22px/1 var(--sans);margin-top:4px
+  }
+  .li .t{font-family:var(--display);font-weight:600;font-size:42px;letter-spacing:-.02em;line-height:1.12}
+  .li .d{font:400 24px/1.45 var(--sans);color:var(--muted);margin-top:8px;max-width:32ch}
+
+  /* slide 4 — the exchange */
+  .deal{display:flex;gap:26px}
+  .col{flex:1;border:1px solid var(--sep);border-radius:24px;background:var(--card);padding:44px 36px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .col h4{font:600 16px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+  .col ul{list-style:none}
+  .col li{font:500 27px/1.35 var(--sans);padding:16px 0;border-bottom:1px solid var(--sep)}
+  .col li:last-child{border-bottom:0}
+
+  /* slide 5 — CTA */
+  .wa{
+    display:inline-flex;align-items:center;gap:16px;background:var(--paper);color:var(--ink-strong);
+    border-radius:999px;padding:26px 44px;font:600 34px/1 var(--sans);letter-spacing:-.01em
+  }
+
+  @media print{
+    body{background:#fff;padding:0}
+    .rig{gap:0}
+    .tag{display:none}
+    .slide{break-after:page;page-break-after:always}
+  }
+  @page{size:1080px 1350px;margin:0}
+</style>
+</head>
+<body>
+<div class="rig">
+
+<!-- ══════ SLIDE 1 ══════ -->
+<div class="tag">slide 1 / 5 — 1080 × 1350</div>
+<section class="slide dark">
+  <div class="eyebrow">programme agences fondatrices</div>
+  <div class="grow"></div>
+
+  <div class="bignum">10</div>
+  <div style="height:28px"></div>
+  <h2 class="h2" style="font-size:72px">agences.<br>Pas onze.</h2>
+
+  <div style="height:64px"></div>
+  <div class="seats">
+    <div class="seat">1</div><div class="seat">2</div><div class="seat">3</div><div class="seat">4</div><div class="seat">5</div>
+    <div class="seat">6</div><div class="seat">7</div><div class="seat">8</div><div class="seat">9</div><div class="seat">10</div>
+  </div>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="muted" style="font:400 25px/1.4 var(--sans);max-width:24ch">
+      On ouvre l'accès agence par agence. Les dix premières entrent à des conditions qui ne reviendront pas.
+    </span>
+    <span class="num">01</span>
+  </div>
+</section>
+
+<!-- ══════ SLIDE 2 ══════ -->
+<div class="tag">slide 2 / 5</div>
+<section class="slide">
+  <div class="eyebrow">le prix, sans détour</div>
+  <div class="grow"></div>
+
+  <div class="price">
+    <span class="p">99</span>
+    <span class="u">TND / mois</span>
+  </div>
+  <div style="height:30px"></div>
+  <p class="after">les trois premiers mois — puis 199 TND / mois</p>
+
+  <div style="height:56px"></div>
+  <div class="rule"></div>
+  <div style="height:40px"></div>
+  <p class="body">Sans engagement. Vous partez quand vous voulez, et vous partez avec vos données.</p>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="swipe">Faites glisser <span style="font-size:22px">&rarr;</span></span>
+    <span class="num">02</span>
+  </div>
+</section>
+
+<!-- ══════ SLIDE 3 ══════ -->
+<div class="tag">slide 3 / 5</div>
+<section class="slide">
+  <div class="eyebrow">ce que vous avez</div>
+  <div class="grow"></div>
+
+  <div class="li"><span class="c">&#10003;</span><div>
+    <div class="t">Votre espace de travail</div>
+    <div class="d">Tout votre portefeuille sur un tableau. Nuitées, mois et baux à l'année sur un seul calendrier.</div>
+  </div></div>
+  <div class="li"><span class="c">&#10003;</span><div>
+    <div class="t">Zéro double réservation</div>
+    <div class="d">Deux réservations ne peuvent pas se chevaucher. C'est bloqué dans la base de données, pas dans un rappel.</div>
+  </div></div>
+  <div class="li"><span class="c">&#10003;</span><div>
+    <div class="t">Vos visites 3D</div>
+    <div class="d">On transforme vos photos existantes en visites à 360°. Huit photos par pièce suffisent.</div>
+  </div></div>
+  <div class="li"><span class="c">&#10003;</span><div>
+    <div class="t">Vos annonces sur l'appli</div>
+    <div class="d">Publiées côté locataire, vérifiées avant mise en ligne.</div>
+  </div></div>
+
+  <div class="grow"></div>
+  <div class="foot">
+    <span class="wm">nesty</span>
+    <span class="num">03</span>
+  </div>
+</section>
+
+<!-- ══════ SLIDE 4 ══════ -->
+<div class="tag">slide 4 / 5</div>
+<section class="slide">
+  <div class="eyebrow">l'échange, en clair</div>
+  <div class="grow"></div>
+
+  <h2 class="h2" style="font-size:60px">On ne vous vend pas<br>un logiciel fini.</h2>
+  <div style="height:44px"></div>
+
+  <div class="deal">
+    <div class="col">
+      <h4>vous recevez</h4>
+      <ul>
+        <li>Le tarif fondateur</li>
+        <li>Import de vos biens</li>
+        <li>Vos visites 3D</li>
+        <li>Une ligne directe avec nous</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>on vous demande</h4>
+      <ul>
+        <li>30 minutes par semaine</li>
+        <li>Pendant 3 mois</li>
+        <li>Votre avis, franc</li>
+        <li>Rien d'autre</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="height:44px"></div>
+  <p class="body">On construit avec vous. C'est pour ça qu'il n'y a que dix places.</p>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="muted" style="font:500 23px/1 var(--sans)">Région de Sousse en premier</span>
+    <span class="num">04</span>
+  </div>
+</section>
+
+<!-- ══════ SLIDE 5 ══════ -->
+<div class="tag">slide 5 / 5</div>
+<section class="slide dark">
+  <svg viewBox="0 0 200 140" width="82" height="57" fill="none" aria-label="Nesty" style="display:block">
+    <path d="M 20 120 C 20 45, 55 20, 100 20 C 145 20, 180 45, 180 120" stroke="#FAFAF9" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 42 125 C 42 62, 65 42, 100 42 C 135 42, 158 62, 158 125" stroke="#FAFAF9" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M 62 130 C 62 80, 78 62, 100 62 C 122 62, 138 80, 138 130" stroke="#FAFAF9" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+  <div class="grow"></div>
+
+  <h2 class="h2" style="font-size:88px">Écrivez-nous.<br>Un mot suffit.</h2>
+  <div style="height:40px"></div>
+  <p class="muted" style="font:400 30px/1.55 var(--sans);max-width:26ch">
+    Envoyez « FONDATEUR » en message. On vous rappelle, on vous montre l'outil, et vous décidez.
+  </p>
+
+  <div style="height:56px"></div>
+  <span class="wa">FONDATEUR &rarr;</span>
+
+  <div class="grow"></div>
+  <div class="rule"></div>
+  <div class="foot" style="padding-top:32px">
+    <span class="muted" style="font:400 24px/1.4 var(--sans);max-width:24ch">
+      nesty-tn.vercel.app
+    </span>
+    <span class="num">05</span>
+  </div>
+</section>
+
+</div>
+
+<script>
+/* Export mode: carousel.html?slide=N renders ONLY slide N, filling the page at
+   exactly 1080x1350 with no chrome around it. Used by export.sh to produce the
+   PNGs you upload. Viewing the file normally is unaffected. */
+(function(){
+  var m=location.search.match(/slide=([0-9]+)/); if(!m) return;
+  document.body.style.padding='0'; document.body.style.background='#fff';
+  document.querySelectorAll('.tag').forEach(function(e){e.remove()});
+  var rig=document.querySelector('.rig'); if(rig) rig.style.gap='0';
+  var s=[].slice.call(document.querySelectorAll('.slide'));
+  s.forEach(function(el,i){ if(i!=m[1]-1) el.remove(); });
+})();
+</script>
+</body>
+</html>
