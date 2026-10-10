@@ -420,7 +420,40 @@ Consequences worth knowing:
   heading edits made on 2026-08-01 were to unmounted components — harmless, but the ticket's real
   answer was "already gone".
 
+### 2026-08-30 — Unbackable claims removed from the landing before the launch posts
+Picked up the launch-sprint thread (post 02 fires Mon 31 Aug). The handoff note inside
+`posts/nesty_platform_project.zip` flagged "`demandes avec SLA` still live, third time flagged" —
+it was, and it was not the only one.
+
+**Fixed in `nesty-web`, verified (tsc + lint + 62 tests + `next build`, all green):**
+- **`host.agency.body` / `.points` claimed three features that do not exist** — "team roles",
+  "bulk listings", "requests with SLAs". There is no invite/team UI, no bulk-listing UI and no SLA
+  anywhere in `src/app/dashboard/`. Rewritten in both locales to what ships: one shared calendar,
+  accept/decline on requests, incidents + support. This block *renders* (`host-space.tsx:126`).
+- **Three fabricated 5-star `Review` nodes were emitted as JSON-LD** from `page.tsx` — invented
+  people at invented agencies, `ratingValue: 5`. Fabricated review markup violates Google's
+  review-snippet policy and is exactly the "checked in one phone call" risk `posts/README.md`
+  warns about. Removed.
+- **`FAQPage` JSON-LD was still emitted for an FAQ section that no longer renders** (the orphan
+  problem logged 2026-08-02). Google requires FAQ markup to match visible content. Removed, along
+  with the now-unused `getTranslations` import.
+- **The whole `Voice` testimonial section was deleted** (founder's call): `voice.tsx`, the
+  `<Voice />` render in `seeker-space.tsx`, `TESTIMONIALS` in `showcase.ts`, and the `voice` block
+  in both locales. Its heading asserted *"Three people who'd let us call them"* about people who
+  do not exist.
+
+**Correction to the 2026-08-02 entry — it is wrong about which components are orphaned.**
+That entry lists `Product`, `Features`, `Pillars`, `HowItWorks`, `Faq`, `Showcase` as orphaned and
+implies the landing is only `HostSpace`/`SeekerSpace`. But those two *space* components import
+sections **relatively** (`from "../voice"`), so a grep for `landing/<name>` misses them and
+under-reports what is live. `Voice` was rendered at `seeker-space.tsx:255` the whole time.
+**Before calling any landing component dead, grep the relative form too.**
+
+Still orphaned and left alone (they ship nothing): `product.tsx`, `faq.tsx`, and the `AGENCIES`
+mock list in `showcase.ts` — the last one is captioned "Partner agencies onboarding during launch
+phases" with listing counts, so if anything ever renders it, it needs the same treatment.
+
 ---
 
-Last updated: 2026-08-02
+Last updated: 2026-08-30
 Maintainer: Achref Ben Yaagoub
