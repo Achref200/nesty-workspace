@@ -20,6 +20,11 @@ nesty-base/
 nesty-web/
 demo-video/
 
+# Per-machine AI tooling and coordination state; keep out of source control.
+/.autoclaw/
+/.claude/
+/.clinerules/
+
 # Editor / OS
 .DS_Store
 Thumbs.db
