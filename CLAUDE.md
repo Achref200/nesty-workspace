@@ -455,5 +455,11 @@ phases" with listing counts, so if anything ever renders it, it needs the same t
 
 ---
 
-Last updated: 2026-08-30
+### 2026-10-23 — Full platform readiness review
+
+Production Web and Mobile Web deployments completed after full local checks: Nesty Web passed typecheck, lint, build, and 65 tests; Nesty Base passed typecheck, lint, and build; Flutter passed analyze, 36 tests, and release web build. Public production HTTP checks passed. The catalog has 31 published non-demo listings attributed to the active Achref Agency account; all have a title, city, valid positive price, and image. Full findings, Supabase advisor items, availability gaps, analytics counts, and test boundaries are documented in `docs/PLATFORM_READINESS_REVIEW_2026-10-23.md`.
+
+Known sign-off gaps: the 31 listings have no `available_from` values and the database has no manual availability blocks (two active reservations exist); agency calendar confirmation remains required. Supabase leaked-password protection is disabled and the sanitized public calendar view is still flagged by the security advisor. Payment processing, external error monitoring, and authenticated browser E2E sign-off are not complete. The mobile account-deletion flow is a support request; no hard-delete RPC was applied.
+
+Last updated: 2026-10-23
 Maintainer: Achref Ben Yaagoub
